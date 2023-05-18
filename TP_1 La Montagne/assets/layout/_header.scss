@@ -1,1 +1,103 @@
+header {
+  min-height: 100vh;
+  position: relative;
+  color: $white1;
 
+  .header-content {
+    min-height: 100vh;
+    @include flexColumn;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: appear 1.5s forwards;
+
+    @keyframes appear {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      @include title;
+      font-size: 3.5rem;
+      letter-spacing: 3px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1rem;
+      font-style: italic;
+      margin: 40px auto 60px;
+      width: 85%;
+    }
+
+    span {
+      border: 1px solid $white1;
+      border-radius: 50px;
+      width: 60px;
+      height: 60px;
+      font-size: 1.2rem;
+      @include flexCenter;
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    height: 65px;
+    color: $white1;
+    background: rgba(255, 255, 255, 0.25);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 100;
+    transform: translateX(-50%);
+
+    ul {
+      display: flex;
+      align-items: center;
+    }
+    .nav-left {
+      &:hover li:not(:hover) {
+        background: none;
+        color: $white1;
+      }
+      li {
+        @include title;
+        font-size: 0.7rem;
+        padding: 0 15px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:first-child {
+          background: $white1;
+          color: $black1;
+        }
+
+        &:hover {
+          background: $white1;
+          color: $black1;
+        }
+      }
+    }
+    .nav-right {
+      font-size: 1.1rem;
+      min-width: 100px;
+      width: 25%;
+      max-width: 300px;
+      justify-content: space-around;
+      margin-right: 10px;
+
+      li {
+        transition: 0.15s;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
