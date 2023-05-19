@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Allura";
+  src: url(../fonts/Allura-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Light.ttf);
+}
+
+$white1: rgb(235, 235, 235);
+$brown1: rgb(158, 109, 69);
+$black1: rgb(33, 32, 30);
+$grey1: rgb(169, 166, 159);
+$fontcurs: "Allura", serif;
+$fonth1: "Poppins", sans-serif;
+$fontp: "Roboto", sans-serif;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: $white1;
+}
+
+p {
+  font-family: $fontp;
+  font-size: 1rem;
+}
+
+@mixin title {
+  font-family: $fonth1;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+@mixin subtitle {
+  font-family: $fontcurs;
+  color: $brown1;
+  font-size: 1.5rem;
+  line-height: 0.6;
+}
+
+@mixin boxtitle {
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  h3 {
+    @include subtitle;
+  }
+
+  .fork {
+    background: url(../img/ic-plate.png) center/cover;
+    height: 30px;
+    width: 30px;
+    margin: 50px auto;
+  }
+}

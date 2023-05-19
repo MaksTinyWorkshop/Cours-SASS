@@ -1,0 +1,28 @@
+header {
+  height: 100vh;
+  background: url(../img/bg-slider-06.jpg) center/cover;
+  @include boxtitle;
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h1 {
+    @include title;
+    font-size: 3rem;
+    color: $white1;
+  }
+
+  .fork {
+    background: url(../img/ic-plate-big.png);
+    height: 50px;
+    width: 50px;
+    margin: 50px auto;
+  }
+
+  p {
+    text-transform: uppercase;
+    color: $white1;
+    letter-spacing: 4px;
+  }
+}
