@@ -2,7 +2,55 @@ header {
   height: 100vh;
   background: url(../img/bg-slider-06.jpg) center/cover;
   @include boxtitle;
+  display: block;
 
+  nav {
+    width: 80%;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15%;
+    .logo {
+      font-family: $fontcurs;
+      text-transform: none;
+      font-size: 2em;
+      letter-spacing: 0;
+      color: $white1;
+    }
+    .nav-links {
+      width: 70%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+          font-family: $fontp;
+          font-size: 0.6rem;
+          text-transform: uppercase;
+
+          &:hover {
+            scale: 1.1;
+          }
+        }
+      }
+    }
+    .social {
+      width: 10%;
+      color: $white1;
+      display: flex;
+      justify-content: space-around;
+
+      li:hover {
+        scale: 1.1;
+      }
+    }
+  }
   h3 {
     font-size: 2rem;
   }
@@ -14,15 +62,15 @@ header {
   }
 
   .fork {
-    background: url(../img/ic-plate-big.png);
-    height: 50px;
-    width: 50px;
-    margin: 50px auto;
+    background: url(../img/ic-plate-big.png) center/cover;
+    height: 40px;
+    width: 40px;
+    margin: 35px auto 35px;
   }
 
   p {
     text-transform: uppercase;
     color: $white1;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
   }
 }

@@ -1,0 +1,69 @@
+.discover {
+  height: 100vh;
+
+  .discover-top {
+    height: 50%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    @include boxtitle;
+    background-color: $white1;
+
+    .title {
+      margin: 10px;
+      padding: 10px;
+      border: 1px dashed $brown1;
+      .avatar {
+        background: url(../img/avatar-01.jpg) center/cover;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        margin: 15px auto 10px;
+      }
+      h2 {
+        @include title;
+        font-size: 1.5rem;
+        color: $black1;
+      }
+      h4 {
+        font-family: $fonth1;
+      }
+    }
+
+    .img {
+      background: url(../img/store-01.jpg) center/cover;
+    }
+  }
+  .discover-bottom {
+    height: 50%;
+    background: $black1;
+    padding-top: 50px;
+    @include boxtitle;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      width: 60%;
+      font-family: $fontp;
+      font-size: 0.8rem;
+
+      li {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          height: 1px;
+          width: 100%;
+          background: $white1;
+          scale: 1;
+          transform-origin: left;
+          transition: transform 0.3s ease-in-out;
+        }
+        &:hover::after {
+          transform: scale(0);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.dishes-container {
+  position: relative;
+  height: 100vh;
+  background: url(../img/bg-menu-01.jpg) center/cover;
+  .items-container {
+    height: 100vh;
+    width: 70%;
+    position: absolute;
+    background: $white1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-bottom: 15px;
+    .item {
+      display: grid;
+      grid-template-columns: 30% 60% 10%;
+      align-items: center;
+      margin: 0 15px;
+      border-bottom: 1px dashed $grey1;
+
+      .dish-img img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+
+      .dish-content {
+        margin-left: 10px;
+        h5 {
+          @include title;
+          font-size: 0.6rem;
+        }
+        p {
+          padding: 5px 30px 0 0;
+          font-family: $fontp;
+          font-size: 0.7rem;
+          color: $grey1;
+        }
+      }
+      .price {
+        font-family: $fontp;
+        font-size: 1.2rem;
+        color: $brown1;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: $brown1;
+      top: 0;
+      left: 0;
+    }
+  }
+}
