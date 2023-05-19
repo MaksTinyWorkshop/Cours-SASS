@@ -47,14 +47,14 @@ p {
 @mixin title {
   font-family: $fonth1;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 @mixin subtitle {
   font-family: $fontcurs;
   color: $brown1;
   font-size: 1.5rem;
-  line-height: 0.6;
+  line-height: 0.7;
 }
 
 @mixin boxtitle {

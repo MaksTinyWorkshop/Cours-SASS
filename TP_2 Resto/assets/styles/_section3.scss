@@ -1,0 +1,98 @@
+.book {
+  height: 100vh;
+  background: $black1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .booking-container {
+    width: 70%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    @include boxtitle;
+
+    .hourly-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black;
+
+      .hourly {
+        height: 90%;
+        width: 100%;
+        margin: 15px;
+        border: 1px dashed $white1;
+
+        .title {
+          margin-top: 25px;
+          h2 {
+            color: $white1;
+            @include title;
+          }
+        }
+        .hourly-plan {
+          h3 {
+            @include title;
+            font-size: 0.6rem;
+            text-align: center;
+          }
+
+          p {
+            text-align: center;
+            color: $white1;
+            font-size: 0.6rem;
+            margin: 10px 0 20px;
+          }
+        }
+      }
+    }
+
+    .booking {
+      background: $white1;
+      position: relative;
+
+      .title {
+        margin-top: 55px;
+        h2 {
+          @include title;
+        }
+      }
+      form {
+        padding: 0 10%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+
+        input {
+          width: 90%;
+          height: 30px;
+          background: none;
+          border: none;
+          border-bottom: 1px solid $grey1;
+          outline: none;
+        }
+      }
+      button {
+        position: absolute;
+        bottom: 12%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background: $black1;
+        border: none;
+        border-radius: 50px;
+        color: $white1;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.6rem;
+        cursor: pointer;
+
+        &:hover {
+          background: $brown1;
+        }
+      }
+    }
+  }
+}

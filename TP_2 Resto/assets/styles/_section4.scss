@@ -1,0 +1,11 @@
+.events {
+  height: 90vh;
+  background: $black1;
+  @include boxtitle;
+  position: relative;
+
+  h2 {
+    color: $white1;
+    @include title;
+  }
+}
