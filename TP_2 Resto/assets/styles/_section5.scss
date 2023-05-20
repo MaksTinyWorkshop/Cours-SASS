@@ -1,0 +1,52 @@
+.chef {
+  height: 66vh;
+  background: $black1;
+  position: relative;
+
+  aside {
+    width: 60%;
+    height: 50%;
+    margin: 0 auto;
+    background: $white1;
+    position: relative;
+    z-index: 2;
+    .avatar {
+      background: url(../img/avatar-02.jpg) center/cover;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    p {
+      padding: 50px 60px 20px;
+      line-height: 2;
+      text-align: center;
+    }
+    h4 {
+      font-family: $fontp;
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    h6 {
+      font-family: $fontp;
+      text-align: center;
+      font-size: 0.8rem;
+      color: $brown1;
+    }
+  }
+
+  .mapbg {
+    background: url(../img/gmap.jpg) center/cover;
+    width: 100%;
+    height: 45vh;
+    position: absolute;
+    z-index: 1;
+    top: 32%;
+    overflow: hidden;
+  }
+}

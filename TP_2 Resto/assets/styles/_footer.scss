@@ -1,0 +1,60 @@
+footer {
+  height: 30vh;
+  background: url(../img/bg-footer.jpg) center/cover;
+  display: flex;
+  align-items: center;
+
+  .left {
+    width: 50%;
+    height: 100%;
+    padding: 0 2rem 0 20%;
+    .logo {
+      padding-top: 10px;
+      color: $brown1;
+      font-family: $fontcurs;
+      font-size: 2.5rem;
+    }
+    p {
+      color: $grey1;
+      font-family: $fontp;
+      font-size: 0.8rem;
+      line-height: 2;
+    }
+  }
+  .right {
+    width: 50%;
+    height: 100%;
+    .top {
+      padding: 35px;
+      h4 {
+        @include title;
+        color: $white1;
+      }
+      input {
+        margin-top: 10px;
+        padding: 4px 25px 4px 5px;
+        background: none;
+        border: 1px solid rgba(128, 128, 128, 0.13);
+      }
+    }
+    .bottom {
+      padding: 10px 35px;
+      display: flex;
+      h4 {
+        @include title;
+        color: $white1;
+      }
+      .social {
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
+        margin-left: 50px;
+        i {
+          color: rgba(128, 128, 128, 0.282);
+          font-size: 1rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

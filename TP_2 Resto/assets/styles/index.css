@@ -395,7 +395,7 @@ header p {
 }
 
 .events {
-  height: 90vh;
+  height: 70vh;
   background: rgb(33, 32, 30);
   position: relative;
 }
@@ -422,4 +422,332 @@ header p {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   line-height: 1.2;
+}
+.events .title {
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.events .events-container {
+  width: 65%;
+  height: 68%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "ev1 ev3" "ev2 ev3";
+  grid-gap: 15px;
+}
+.events .events-container .event1 {
+  grid-area: ev1;
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+.events .events-container .event1 .event-img {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.events .events-container .event1 .event-img .date {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: rgb(33, 32, 30);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-top: 11px;
+}
+.events .events-container .event1 .event-img .date h4 {
+  font-family: "Roboto", sans-serif;
+  color: rgb(235, 235, 235);
+  font-size: 1.5rem;
+}
+.events .events-container .event1 .event-img .date h6 {
+  font-family: "Roboto", sans-serif;
+  color: rgb(235, 235, 235);
+  font-size: 0.8rem;
+}
+.events .events-container .event1 .event-img {
+  background: url(../img/event-01.jpg) center/cover;
+}
+.events .events-container .event1 .event-content {
+  background: rgb(235, 235, 235);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px;
+}
+.events .events-container .event1 .event-content h4 {
+  padding: 0 5px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(33, 32, 30);
+}
+.events .events-container .event1 .event-content p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.6rem;
+  color: rgb(169, 166, 159);
+  text-transform: lowercase;
+  padding: 20px 0;
+}
+.events .events-container .event1 .event-content span {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  color: rgb(33, 32, 30);
+  text-transform: uppercase;
+}
+.events .events-container .event2 {
+  grid-area: ev2;
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+.events .events-container .event2 .event-img {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.events .events-container .event2 .event-img .date {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: rgb(33, 32, 30);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-top: 11px;
+}
+.events .events-container .event2 .event-img .date h4 {
+  font-family: "Roboto", sans-serif;
+  color: rgb(235, 235, 235);
+  font-size: 1.5rem;
+}
+.events .events-container .event2 .event-img .date h6 {
+  font-family: "Roboto", sans-serif;
+  color: rgb(235, 235, 235);
+  font-size: 0.8rem;
+}
+.events .events-container .event2 .event-img {
+  background: url(../img/event-02.jpg) center/cover;
+}
+.events .events-container .event2 .event-content {
+  background: rgb(235, 235, 235);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px;
+}
+.events .events-container .event2 .event-content h4 {
+  padding: 0 5px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(33, 32, 30);
+}
+.events .events-container .event2 .event-content p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.6rem;
+  color: rgb(169, 166, 159);
+  text-transform: lowercase;
+  padding: 20px 0;
+}
+.events .events-container .event2 .event-content span {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  color: rgb(33, 32, 30);
+  text-transform: uppercase;
+}
+.events .events-container .event3 {
+  grid-area: ev3;
+  position: relative;
+}
+.events .events-container .event3 .event-img {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.events .events-container .event3 .event-img .date {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: rgb(33, 32, 30);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-top: 11px;
+}
+.events .events-container .event3 .event-img .date h4 {
+  font-family: "Roboto", sans-serif;
+  color: rgb(235, 235, 235);
+  font-size: 1.5rem;
+}
+.events .events-container .event3 .event-img .date h6 {
+  font-family: "Roboto", sans-serif;
+  color: rgb(235, 235, 235);
+  font-size: 0.8rem;
+}
+.events .events-container .event3 .event-img {
+  background: url(../img/event-03.jpg) center/cover;
+}
+.events .events-container .event3 .event-img .date {
+  top: 16.5%;
+  z-index: 10;
+}
+.events .events-container .event3 .event-content {
+  background: rgb(235, 235, 235);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px;
+}
+.events .events-container .event3 .event-content h4 {
+  padding: 0 5px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(33, 32, 30);
+}
+.events .events-container .event3 .event-content p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.6rem;
+  color: rgb(169, 166, 159);
+  text-transform: lowercase;
+  padding: 20px 0;
+}
+.events .events-container .event3 .event-content span {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  color: rgb(33, 32, 30);
+  text-transform: uppercase;
+}
+.events .events-container .event3 .event-content {
+  align-items: center;
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  margin: 5% 5%;
+  top: 0;
+  left: 0;
+}
+.events .events-container .event3 .event-content h4 {
+  padding: 10px 0 0;
+  text-align: center;
+}
+.events .events-container .event3 .event-content p {
+  margin-bottom: 20px;
+}
+
+.chef {
+  height: 66vh;
+  background: rgb(33, 32, 30);
+  position: relative;
+}
+.chef aside {
+  width: 60%;
+  height: 50%;
+  margin: 0 auto;
+  background: rgb(235, 235, 235);
+  position: relative;
+  z-index: 2;
+}
+.chef aside .avatar {
+  background: url(../img/avatar-02.jpg) center/cover;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.chef aside p {
+  padding: 50px 60px 20px;
+  line-height: 2;
+  text-align: center;
+}
+.chef aside h4 {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.chef aside h6 {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgb(158, 109, 69);
+}
+.chef .mapbg {
+  background: url(../img/gmap.jpg) center/cover;
+  width: 100%;
+  height: 45vh;
+  position: absolute;
+  z-index: 1;
+  top: 32%;
+  overflow: hidden;
+}
+
+footer {
+  height: 30vh;
+  background: url(../img/bg-footer.jpg) center/cover;
+  display: flex;
+  align-items: center;
+}
+footer .left {
+  width: 50%;
+  height: 100%;
+  padding: 0 2rem 0 20%;
+}
+footer .left .logo {
+  padding-top: 10px;
+  color: rgb(158, 109, 69);
+  font-family: "Allura", serif;
+  font-size: 2.5rem;
+}
+footer .left p {
+  color: rgb(169, 166, 159);
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  line-height: 2;
+}
+footer .right {
+  width: 50%;
+  height: 100%;
+}
+footer .right .top {
+  padding: 35px;
+}
+footer .right .top h4 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: rgb(235, 235, 235);
+}
+footer .right .top input {
+  margin-top: 10px;
+  padding: 4px 25px 4px 5px;
+  background: none;
+  border: 1px solid rgba(128, 128, 128, 0.13);
+}
+footer .right .bottom {
+  padding: 10px 35px;
+  display: flex;
+}
+footer .right .bottom h4 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: rgb(235, 235, 235);
+}
+footer .right .bottom .social {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin-left: 50px;
+}
+footer .right .bottom .social i {
+  color: rgba(128, 128, 128, 0.282);
+  font-size: 1rem;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */

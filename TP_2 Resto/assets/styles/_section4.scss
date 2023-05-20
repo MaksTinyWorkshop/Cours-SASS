@@ -1,5 +1,5 @@
 .events {
-  height: 90vh;
+  height: 70vh;
   background: $black1;
   @include boxtitle;
   position: relative;
@@ -7,5 +7,144 @@
   h2 {
     color: $white1;
     @include title;
+  }
+  .title {
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .events-container {
+    width: 65%;
+    height: 68%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas:
+      "ev1 ev3"
+      "ev2 ev3";
+    grid-gap: 15px;
+
+    @mixin grid {
+      display: grid;
+      grid-template-columns: 35% 65%;
+    }
+
+    @mixin placedate {
+      .date {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background: $black1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding-top: 11px;
+
+        h4 {
+          font-family: $fontp;
+          color: $white1;
+          font-size: 1.5rem;
+        }
+        h6 {
+          font-family: $fontp;
+          color: $white1;
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    @mixin event-img {
+      .event-img {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        @include placedate;
+      }
+    }
+
+    @mixin event-content {
+      .event-content {
+        background: $white1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 15px;
+        h4 {
+          padding: 0 5px;
+          font-family: $fontp;
+          color: $black1;
+        }
+        p {
+          font-family: $fontp;
+          font-size: 0.6rem;
+          color: $grey1;
+          text-transform: lowercase;
+          padding: 20px 0;
+        }
+
+        span {
+          font-family: $fonth1;
+          font-size: 0.7rem;
+          color: $black1;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .event1 {
+      grid-area: ev1;
+      @include grid;
+      @include event-img;
+      .event-img {
+        background: url(../img/event-01.jpg) center/cover;
+      }
+      @include event-content;
+    }
+
+    .event2 {
+      grid-area: ev2;
+      @include grid;
+      @include event-img;
+      .event-img {
+        background: url(../img/event-02.jpg) center/cover;
+      }
+      @include event-content;
+    }
+    .event3 {
+      grid-area: ev3;
+      @include event-img;
+      position: relative;
+      .event-img {
+        background: url(../img/event-03.jpg) center/cover;
+        .date {
+          top: 16.5%;
+          z-index: 10;
+        }
+      }
+      @include event-content;
+      .event-content {
+        align-items: center;
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        margin: 5% 5%;
+        top: 0;
+        left: 0;
+
+        h4 {
+          padding: 10px 0 0;
+          text-align: center;
+        }
+
+        p {
+          margin-bottom: 20px;
+        }
+      }
+    }
   }
 }
